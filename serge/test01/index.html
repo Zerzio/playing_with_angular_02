@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>RxJS for AngularJS Rocks</title>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            border-bottom: 1px solid red;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body ng-app="example">
+
+<div class="container" ng-controller="ctrl-interval">
+    <div>counter:{{ counter }} (newValue:{{newValue}},oldValue:{{oldValue}})</div>
+    <pre>{{observedChange}}</pre>
+</div>
+
+<div class="container" ng-controller="ctrl-array1">
+    <div>
+        <button ng-click="button1click()">Button 1</button>
+    </div>
+    <div>
+        <button ng-click="subscribe()">subscribe</button>
+    </div>
+
+    <pre>{{ orders }}</pre>
+</div>
+
+<div class="container" ng-controller="ctrl-obs-fn">
+    <div>
+        <button ng-click="clickMe('ObservableFunction clickMe')">clickMe</button>
+    </div>
+</div>
+
+<div class="container" ng-controller="ctrl-pxEmitter">
+    <div>
+        <button ng-click="pxEmitter('arg for pxEmitter')">pxEmitter</button>
+    </div>
+</div>
+
+<div class="container" ng-controller="ctrl-event">
+    <div>
+        <button ng-click="emitEvent()">emitEvent</button>
+    </div>
+    <pre>data (event): {{ data }}</pre>
+</div>
+
+
+<script src="rx.all.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="../../dist/rx.angular.js"></script>
+<script src="playground.js"></script>
+<script src="app.js"></script>
+<script src="ctrl-array1.js"></script>
+<script src="ctrl-obs-fn.js"></script>
+<script src="ctrl-interval.js"></script>
+<script src="ctrl-event.js"></script>
+<script src="ctrl-pxEmitter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Git API Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="ngGit" ng-controller="gitCtrl">
+<div>
+    <div class="container">
+        <div class="header">
+            <h2>(NG) Who to follow</h2><a href="#" class="NG_refresh" ng-click="refresh()">Refresh</a>
+        </div>
+        <ul class="suggestions">
+            <li class="suggestion1ng" ng-show="data.suggestions[0].show">
+                <img ng-src="{{data.suggestions[0].img.src}}"/>
+                <a ng-href="{{data.suggestions[0].href}}" target="_blank" class="username" ng-bind="data.suggestions[0].textContent">this will not be displayed</a>
+                <a href="#" class="close NG_close1" ng-click="close1()">x</a>
+            </li>
+            <li class="suggestion2ng" ng-show="data.suggestions[1].show">
+                <img ng-src="{{data.suggestions[1].img.src}}"/>
+                <a ng-href="{{data.suggestions[1].href}}" target="_blank" class="username" ng-bind="data.suggestions[1].textContent">this will not be displayed</a>
+                <a href="#" class="close NG_close2" ng-click="close2()">x</a>
+            </li>
+            <li class="suggestion3ng" ng-show="data.suggestions[2].show">
+                <img ng-src="{{data.suggestions[2].img.src}}"/>
+                <a ng-href="{{data.suggestions[2].href}}" target="_blank" class="username" ng-bind="data.suggestions[2].textContent">this will not be displayed</a>
+                <a href="#" class="close NG_close3" ng-click="close3()">x</a>
+            </li>
+        </ul>
+        <pre>{{data | json}}</pre>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.async.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.coincidence.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.binding.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.time.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs-dom/2.0.7/rx.dom.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="../../dist/rx.angular.js"></script>
+<script src="app.js"></script>
+<script src="ctrl.js"></script>
+<script src="svc.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Git API Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="ngGit" ng-controller="gitCtrl">
+<div>
+    <div class="container">
+        <div class="header">
+            <h2>(NG) Who to follow</h2><a href="#" class="NG_refresh" ng-click="refresh()">Refresh</a>
+        </div>
+        <ul class="suggestions">
+            <li ng-repeat="suggestion in data.suggestions" class="suggestion">
+                <img ng-src="{{suggestion.img.src}}"/>
+                <a ng-href="{{suggestion.href}}" target="_blank" class="username" ng-bind="suggestion.textContent">this will not be displayed</a>
+                <a href="#" class="close NG_close1" ng-click="close($index)">x</a>
+            </li>
+        </ul>
+        <pre>{{data | json}}</pre>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.async.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.coincidence.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.binding.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.26/rx.time.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/rxjs-dom/2.0.7/rx.dom.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="../../dist/rx.angular.js"></script>
+<script src="app.js"></script>
+<script src="ctrl.js"></script>
+<script src="svc.js"></script>
+</body>
+</html>
