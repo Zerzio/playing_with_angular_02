@@ -5,7 +5,7 @@ A first(2) shared GIT for my AngularJS experiences...
 
 Hereunder is the project from wich I was starting...
 
-
+=======================
 
 
 [![Build Status](https://travis-ci.org/Reactive-Extensions/rx.angular.js.png)](https://travis-ci.org/Reactive-Extensions/rx.angular.js)
