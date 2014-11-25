@@ -1,3 +1,13 @@
+playing_with_angular_02
+=======================
+
+A first(2) shared GIT for my AngularJS experiences...
+
+Hereunder is the project from wich I was starting...
+
+=======================
+
+
 [![Build Status](https://travis-ci.org/Reactive-Extensions/rx.angular.js.png)](https://travis-ci.org/Reactive-Extensions/rx.angular.js)
 [![GitHub version](http://img.shields.io/github/tag/reactive-extensions/rx.angular.js.svg)](https://github.com/Reactive-Extensions/rx.angular.js)
 [![NPM version](http://img.shields.io/npm/v/rx-angular.svg)](https://npmjs.org/package/rx-angular)
